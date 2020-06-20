@@ -1,0 +1,18 @@
+image: adoptopenjdk:11-hotspot
+
+variables:
+  COURSIER_CACHE: .cache/coursier
+
+cache:
+  paths:
+    - .cache/
+
+test:
+  stage: test
+  script:
+    - ./sbt test
+
+scalafmt:
+  stage: test
+  script:
+    - ./sbt scalafmtCheckAll scalafmtSbtCheck
