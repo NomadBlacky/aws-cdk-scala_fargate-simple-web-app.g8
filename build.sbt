@@ -15,11 +15,14 @@ lazy val commonSettings = Seq(
 )
 
 lazy val server = (project in file("server"))
+  .enablePlugins(JavaAppPackaging, DockerPlugin)
   .settings(commonSettings)
   .settings(
     libraryDependencies ++= Seq(
       "com.lihaoyi" %% "cask" % "0.6.7"
-    )
+    ),
+    dockerBaseImage := "adoptopenjdk:11-hotspot",
+    dockerExposedPorts := Seq(8080)
   )
 
 lazy val cdk = (project in file("cdk"))
