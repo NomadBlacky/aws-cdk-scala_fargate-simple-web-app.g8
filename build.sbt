@@ -17,6 +17,9 @@ lazy val commonSettings = Seq(
 lazy val server = (project in file("server"))
   .settings(commonSettings)
   .settings(
+    libraryDependencies ++= Seq(
+      "com.lihaoyi" %% "cask" % "0.6.7"
+    )
   )
 
 lazy val cdk = (project in file("cdk"))
