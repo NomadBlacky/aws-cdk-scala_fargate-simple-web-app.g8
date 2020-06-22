@@ -6,5 +6,7 @@ object WebApp extends cask.MainRoutes {
     "Hello World!"
   }
 
+  override val host: String = "0.0.0.0"
+
   initialize()
 }
