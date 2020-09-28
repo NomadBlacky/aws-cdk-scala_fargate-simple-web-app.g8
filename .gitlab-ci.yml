@@ -23,14 +23,6 @@ scalafmt:
   script:
     - ./sbt scalafmtCheckAll scalafmtSbtCheck
 
-build server dockerfile:
-  stage: test
-  script:
-    - ./sbt server/docker:stage
-  artifacts:
-    paths:
-      - server/target/docker/stage/
-
 build cdk image:
   stage: test
   image: docker:latest
