@@ -1,6 +1,4 @@
 ThisBuild / scalaVersion := "2.13.3"
-ThisBuild / organization := "dev.nomadblacky"
-ThisBuild / organizationName := "NomadBlacky"
 ThisBuild / name := "aws-cdk-fargate"
 ThisBuild / version := "0.1.0-SNAPSHOT"
 
